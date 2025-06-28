@@ -19,32 +19,32 @@ export default function MotherHomeScreen() {
   const iconData = [
     {
       label: "Vaccination",
-      source: require("../../assets/images/vaccination.png"),
+      source: require("../assets/images/vaccination.png"),
       route: "/add-vaccination",
     },
     {
       label: "Diet Plan",
-      source: require("../../assets/images/dietplan.png"),
+      source: require("../assets/images/dietplan.png"),
       route: "/NewRemedy",
     },
     {
       label: "Milestones",
-      source: require("../../assets/images/milestone.png"),
+      source: require("../assets/images/milestone.png"),
       route: "/add-milestone",
     },
     {
       label: "Motivational Quotes",
-      source: require("../../assets/images/quote.png"),
+      source: require("../assets/images/quote.png"),
       route: "/add-quote",
     },
     {
       label: "Activities",
-      source: require("../../assets/images/activity.png"),
+      source: require("../assets/images/activity.png"),
       route: "/water-intake",
     },
     {
       label: "Remedies",
-      source: require("../../assets/images/remedie.png"),
+      source: require("../assets/images/remedie.png"),
       route: "/NewRemedy",
     },
   ] as const;

@@ -37,6 +37,11 @@ export default function LoginScreen() {
 
     // Store token in AsyncStorage
     await AsyncStorage.setItem('token', token);
+    if(token){
+      await AsyncStorage.setItem('token', token);
+      router.push('/login/SuccessfulScreen');
+
+    }
 
     console.log('✅ Login successful! Token saved.');
 
@@ -60,7 +65,7 @@ export default function LoginScreen() {
       {/* Centered Image */}
       <View style={styles.imageContainer}>
         <Image
-          source={require('../../../assets/images/logo.png')}
+          source={require('../../assets/images/logo.png')}
           style={styles.image}
         />
       </View>

@@ -84,7 +84,7 @@ export default function AddRemedyScreen() {
                                     source={
                                         profileImage
                                             ? { uri: profileImage }
-                                            : require('../../assets/images/profile-icon.png')
+                                            : require('../assets/images/profile-icon.png')
                                     }
                                     style={styles.profileImage}
                                 />
@@ -120,7 +120,7 @@ export default function AddRemedyScreen() {
                             >
                                 <View style={styles.imageRow}>
                                     <Image
-                                        source={require('../../assets/images/upload.png')}
+                                        source={require('../assets/images/upload.png')}
                                         style={styles.iconImage}
                                     />
                                 </View>
