@@ -95,7 +95,7 @@ export default function AddBabyScreen() {
                     {image ? (
                         <Image source={{ uri: image }} style={styles.profileImage} />
                     ) : (
-                        <Image source={require('../assets/images/profile-icon.png')} style={styles.profileIcon} />
+                        <Image source={require('../../assets/images/profile-icon.png')} style={styles.profileIcon} />
                     )}
                 </View>
                 <View style={styles.profileTextContainer}>

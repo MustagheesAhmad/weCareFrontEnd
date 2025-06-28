@@ -14,7 +14,7 @@ export default function HomeScreen() {
     async function loadFonts() {
       try {
         await Font.loadAsync({
-          'Italianno': require('../assets/fonts/Italianno-Regular.ttf'),  // Ensure correct font path
+          'Italianno': require('../../assets/fonts/Italianno-Regular.ttf'),  // Ensure correct font path
         });
         setFontsLoaded(true);
       } catch (error) {
@@ -76,7 +76,7 @@ export default function HomeScreen() {
   return (
     <View style={styles.container}>
       <Animated.Image
-        source={require('../assets/images/logo.png')}  // Static image
+        source={require('../../assets/images/logo.png')}  // Static image
         style={[styles.img, animatedImageStyle]}
       />
       <Animated.Text

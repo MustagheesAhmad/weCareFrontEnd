@@ -27,7 +27,7 @@ export default function WelcomeScreen() {
         <Text style={styles.welcomeText}>Welcome to Weecare</Text>
 
         <Image
-          source={require('../assets/images/welcome-pic.png')}
+          source={require('../../assets/images/welcome-pic.png')}
           style={styles.image}
           resizeMode="contain"
         />

@@ -17,21 +17,21 @@ const nutritionists = [
     name: "Dr. Umer Sami",
     specialization: "Specialization",
     fee: "Rs: 2000",
-    profileImage: require("../assets/images/profile-icon.png"), // replace with your image path
+    profileImage: require("../../assets/images/profile-icon.png"), // replace with your image path
   },
   {
     id: 2,
     name: "Dr. Umer Sami",
     specialization: "Specialization",
     fee: "Rs: 2000",
-    profileImage: require("../assets/images/profile-icon.png"), // replace with your image path
+    profileImage: require("../../assets/images/profile-icon.png"), // replace with your image path
   },
   {
     id: 3,
     name: "Dr. Umer Sami",
     specialization: "Specialization",
     fee: "Rs: 2000",
-    profileImage: require("../assets/images/profile-icon.png"), // replace with your image path
+    profileImage: require("../../assets/images/profile-icon.png"), // replace with your image path
   },
 ];
 
