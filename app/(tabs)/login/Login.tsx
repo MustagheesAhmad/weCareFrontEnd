@@ -1,3 +1,6 @@
+import API from '@/utils/api';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+
 import { useRouter } from 'expo-router';
 import React, { useState } from 'react';
 import { Image, ScrollView, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
@@ -5,27 +8,43 @@ import { Image, ScrollView, StyleSheet, Text, TextInput, TouchableOpacity, View 
 export default function LoginScreen() {
   const router = useRouter();
 
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [email, setEmail] = useState('bino@example.com');
+  const [password, setPassword] = useState('securepassword');
   const [errors, setErrors] = useState({ email: '', password: '' });
 
   const goToSignup = () => {
     router.push('/signup/DoctorSignup');
   };
 
-  const handleLogin = () => {
-    const newErrors = {
-      email: email.trim() ? '' : 'Email is required',
-      password: password ? '' : 'Password is required',
-    };
-
-    setErrors(newErrors);
-
-    const isValid = Object.values(newErrors).every((error) => error === '');
-    if (!isValid) return;
-
-    router.push('/login/SuccessfulScreen');
+  const handleLogin = async () => {
+  const newErrors = {
+    email: email.trim() ? '' : 'Email is required',
+    password: password ? '' : 'Password is required',
   };
+  console.log("🚀 ~ handleLogin ~ newErrors.password:", password)
+  console.log("🚀 ~ handleLogin ~ newErrors.email:", email)
+
+  setErrors(newErrors);
+  if (newErrors.email || newErrors.password) return;
+
+  try {
+    const response = await API.post('/auth/login', {
+      email,
+      password,
+    });
+
+    const token = response.data.token; // get JWT from backend
+
+    // Store token in AsyncStorage
+    await AsyncStorage.setItem('token', token);
+
+    console.log('✅ Login successful! Token saved.');
+
+  } catch (error) {
+    console.error('❌ Login error:', error);
+  }
+};
+
 
   return (
     <ScrollView contentContainerStyle={styles.container}>
