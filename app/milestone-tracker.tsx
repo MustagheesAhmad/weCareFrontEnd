@@ -31,7 +31,7 @@ export default function MilestoneTracker() {
                 renderItem={({ item }) => (
                     <View style={styles.card}>
                         <Image
-                            source={require('../../assets/images/baby-icon.png')}
+                            source={require('../assets/images/baby-icon.png')}
                             style={styles.image}
                             resizeMode="contain"
                         />

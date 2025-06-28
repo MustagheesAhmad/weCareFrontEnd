@@ -24,7 +24,7 @@ export default function PaymentScreen() {
       {/* Icon */}
       <View style={styles.iconWrapper}>
         <Image
-          source={require('../../assets/images/payment.png')} 
+          source={require('../assets/images/payment.png')} 
           style={styles.icon}
           resizeMode="contain"
         />

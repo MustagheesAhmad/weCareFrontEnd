@@ -154,8 +154,8 @@ const handleParentSignup = async () => {
     async function loadFonts() {
       try {
         await Font.loadAsync({
-          'Bree Serif': require('../../assets/fonts/BreeSerif-Regular.ttf'),
-          'Poppins': require('../../assets/fonts/Poppins-Regular.ttf'),
+          'Bree Serif': require('../assets/fonts/BreeSerif-Regular.ttf'),
+          'Poppins': require('../assets/fonts/Poppins-Regular.ttf'),
         });
         setFontsLoaded(true);
       } catch (error) {
@@ -184,7 +184,7 @@ const handleParentSignup = async () => {
           {image ? (
             <Image source={{ uri: image }} style={styles.profileImage} />
           ) : (
-            <Image source={require('../../assets/images/profile-icon.png')} style={styles.profileIcon} />
+            <Image source={require('../assets/images/profile-icon.png')} style={styles.profileIcon} />
           )}
         </View>
         <View style={styles.profileTextContainer}>

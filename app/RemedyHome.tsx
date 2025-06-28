@@ -59,7 +59,7 @@ export default function RemediesHome() {
                         source={
                             item.profileImage
                                 ? { uri: item.profileImage }
-                                : require('../../assets/images/profile-icon.png')
+                                : require('../assets/images/profile-icon.png')
                         }
                         style={styles.cardProfileImage}
                     />

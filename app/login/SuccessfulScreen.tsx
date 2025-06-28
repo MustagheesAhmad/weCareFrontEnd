@@ -26,7 +26,7 @@ export default function LoginSuccessScreen() {
             <ScrollView contentContainerStyle={styles.scrollContent}>
                 <View style={styles.content}>
                     <Image
-                        source={require('../../../assets/images/success.png')}
+                        source={require('../../assets/images/success.png')}
                         style={styles.successImage}
                         resizeMode="contain"
                     />
@@ -39,7 +39,7 @@ export default function LoginSuccessScreen() {
                     <TouchableOpacity style={styles.roleOption} onPress={() => selectRole('Doctor')}>
                         <View style={styles.imgbox}>
                             <Image
-                                source={require('../../../assets/images/doctor.png')}
+                                source={require('../../assets/images/doctor.png')}
                                 style={styles.roleImage}
                                 resizeMode="contain"
                             />
@@ -50,7 +50,7 @@ export default function LoginSuccessScreen() {
                     <TouchableOpacity style={styles.roleOption} onPress={() => selectRole('Parent')}>
                         <View style={styles.imgbox}>
                             <Image
-                                source={require('../../../assets/images/mama.png')}
+                                source={require('../../assets/images/mama.png')}
                                 style={styles.roleImage}
                                 resizeMode="contain"
                             />
